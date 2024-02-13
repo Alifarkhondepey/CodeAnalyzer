@@ -21,8 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Hospogate.CodeFixes\Hospogate.CodeFixes.csproj" />
-    <ProjectReference Include="..\Hospogate\Hospogate.csproj" />
+    <ProjectReference Include="..\Hospogate.CodeFixes\Analyzer.CodeFixes.csproj" />
+    <ProjectReference Include="..\Hospogate\Analyzer.csproj" />
   </ItemGroup>
 
 </Project>
