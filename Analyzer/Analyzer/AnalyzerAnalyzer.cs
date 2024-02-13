@@ -5,12 +5,12 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using System;
 using System.Collections.Immutable;
 
-namespace Hospogate
+namespace Analyzer
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    public class HospogateAnalyzer : DiagnosticAnalyzer
+    public class AnalyzerAnalyzer : DiagnosticAnalyzer
     {
-        public const string DiagnosticId = "HospogateAnalyzer";
+        public const string DiagnosticId = "AnalyzerAnalyzer";
 
         private static readonly LocalizableString Title = new LocalizableResourceString(nameof(Resources.AnalyzerTitle), Resources.ResourceManager, typeof(Resources));
         private static readonly LocalizableString MessageFormat = new LocalizableResourceString(nameof(Resources.AnalyzerMessageFormat), Resources.ResourceManager, typeof(Resources));

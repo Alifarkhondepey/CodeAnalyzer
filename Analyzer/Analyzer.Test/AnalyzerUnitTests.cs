@@ -1,13 +1,13 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
-using VerifyCS = Hospogate.Test.CSharpCodeFixVerifier<
-    Hospogate.HospogateAnalyzer,
-    Hospogate.HospogateCodeFixProvider>;
+using VerifyCS = Analyzer.Test.CSharpCodeFixVerifier<
+    Analyzer.AnalyzerAnalyzer,
+    Analyzer.CodeAnalyzer.AnalyzerCodeFixProvider>;
 
-namespace Hospogate.Test
+namespace Analyzer.Test
 {
     [TestClass]
-    public class HospogateUnitTest
+    public class AnalyzerUnitTest
     {
         //No diagnostics expected to show up
         [TestMethod]
@@ -52,7 +52,7 @@ namespace Hospogate.Test
         }
     }";
 
-            var expected = VerifyCS.Diagnostic("Hospogate").WithLocation(0).WithArguments("TypeName");
+            var expected = VerifyCS.Diagnostic("Analyzer").WithLocation(0).WithArguments("TypeName");
             await VerifyCS.VerifyCodeFixAsync(test, expected, fixtest);
         }
     }
